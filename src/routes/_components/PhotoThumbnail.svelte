@@ -1,5 +1,7 @@
 <script lang="ts">
-  export let photo: { id: Number, alt: string };
+	import type { IPhoto } from "./photos";
+
+  export let photo: IPhoto;
 </script>
 
 <div

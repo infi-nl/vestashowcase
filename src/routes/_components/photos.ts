@@ -1,4 +1,9 @@
-export const photos = [
+export interface IPhoto {
+  id: number;
+  alt: string;
+}
+
+export const photos: IPhoto[] = [
   { id: 1001, alt: '"Vesta goes brrrrr..." in a rainbow pattern', },
   { id: 1002, alt: 'Three colored circles with dots', },
   { id: 1003, alt: 'Random colorful areas', },
