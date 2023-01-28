@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { IPhoto } from "./photos";
+  import type { IPhoto } from "./photos";
 
   export let photo: IPhoto;
 </script>
