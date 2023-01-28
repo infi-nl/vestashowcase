@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .anchor {
+    @apply text-orange-600 hover:text-orange-500 hover:underline;
+  }
+}
