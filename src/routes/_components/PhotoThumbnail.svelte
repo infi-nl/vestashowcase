@@ -6,6 +6,7 @@
 
 <div
   class={`
+    border-2 border-gray-700
     flex flex-col justify-end
     shadow-lg shadow-black/50
     transition-all delay-500 duration-[2000ms] ease-in-out

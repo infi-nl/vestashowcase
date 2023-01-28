@@ -11,7 +11,7 @@
       Yes please!
       Zie hier wat we er zoal mee doen...
     </p>
-    <div class="flex justify-center gap-2">
+    <div class="flex justify-center sm:gap-2 text-sm sm:text-base">
       <!-- svelte-ignore security-anchor-rel-noreferrer -->
       <a class="group flex flex-col items-center text-center p-2 hover:bg-gray-50/10" href="https://infi.nl/nieuws/vestathon-2022/" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 group-hover:text-orange-400">
