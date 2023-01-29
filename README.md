@@ -23,3 +23,9 @@ npm run build
 ```
 
 You can preview the production build with `npm run preview`.
+
+## Expected result
+
+You should see something like this:
+
+![Desktop rendering](sample-on-desktop.png) ![Phone rendering](sample-on-phone.png) 
