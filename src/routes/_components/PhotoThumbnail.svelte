@@ -2,6 +2,14 @@
   import type { IPhoto } from "./photos";
 
   export let photo: IPhoto;
+
+  $: style = photo?.id
+    ? `background-image: url(photos/${photo.id}.webp), linear-gradient(to bottom right, #fb923c, #f97316)`
+    : `background-image: linear-gradient(to bottom right, #fb923c, #f97316)`;
+
+  $: alt = photo?.id
+    ? (photo.alt || photo.id)
+    : "&nbsp;";
 </script>
 
 <div
@@ -14,12 +22,10 @@
     hover:bg-[length:350%] hover:bg-[center_top_22%]
     ${$$props.class}
   `}
-  style={`background-image:
-    url(photos/${photo.id}.webp),
-    linear-gradient(to bottom right, #fb923c, #f97316)`}
+  {style}
 >
   <div class="text-center font-bold p-2 bg-gray-50/60 text-gray-800">
     <span class="sr-only">Foto van een oranje muur met Vestabord, en daarop te zien:</span>
-    {photo.alt || photo.id}
+    {@html alt}
   </div>
 </div>

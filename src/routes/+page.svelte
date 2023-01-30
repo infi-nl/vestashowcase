@@ -1,10 +1,25 @@
 <script lang="ts">
-	import Footer from "./_components/Footer.svelte";
-import HeaderBar from "./_components/HeaderBar.svelte";
-import type { IPhoto } from "./_components/photos";
-	import PhotoThumbnail from "./_components/PhotoThumbnail.svelte";
-	import ThumbnailIntermezzo from "./_components/ThumbnailIntermezzo.svelte";
+  import { onMount  } from 'svelte';
+  import { photos, type IPhoto } from "./_components/photos";
+  import { shuffle } from "../lib/util/shuffle";
+
+  import Footer from "./_components/Footer.svelte";
+  import HeaderBar from "./_components/HeaderBar.svelte";
+  import PhotoThumbnail from "./_components/PhotoThumbnail.svelte";
+  import ThumbnailIntermezzo from "./_components/ThumbnailIntermezzo.svelte";
+  
   export let data: { photos: IPhoto[] };
+  let shuffledPhotos: IPhoto[] = data.photos;
+
+  onMount (() => {
+    console.log("onMount");
+    const head = photos[0];
+    const tail = photos.slice(1);
+    shuffledPhotos = [
+        head, // Force a specific picture with a real life person at the start.
+        ...shuffle(tail)
+      ];
+  });
 </script>
 
 <header class="max-w-[1600px] mx-auto">
@@ -12,7 +27,7 @@ import type { IPhoto } from "./_components/photos";
   <HeaderBar />
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xl:gap-8 p-4 md:px-8">
-    {#each data.photos as photo, index}
+    {#each shuffledPhotos as photo, index}
 
       {#if index === 2}
         <ThumbnailIntermezzo class="aspect-[1790/1220]">
@@ -78,7 +93,7 @@ import type { IPhoto } from "./_components/photos";
         </ThumbnailIntermezzo>
       {/if}
 
-      <PhotoThumbnail photo={photo} class="aspect-[1790/1220]" />
+      <PhotoThumbnail {photo} class="aspect-[1790/1220]" />
     {/each}
 
     <ThumbnailIntermezzo class="lg:col-span-3">

@@ -1,13 +1,11 @@
 import { photos } from "./_components/photos";
-import { shuffle } from "../lib/util/shuffle";
 
 export function load() {
-  const head = photos[0];
-  const tail = photos.slice(1);
-  return {
-    photos: [
-      head, // Force a specific picture with a real life person at the start.
-      ...shuffle(tail)
-    ],
-  };
+  // Ensure the Server-Side Rendered page has the correct number
+  // of empty photo objects. Leave it up to the client page to
+  // shuffle the list per each client's session every time, and
+  // have Svelte replace the empty placeholders with the actual
+  // photo's in a shuffled order.
+  const emptyPhotoObject = { };
+  return { photos: photos.map(() => emptyPhotoObject) };
 }
