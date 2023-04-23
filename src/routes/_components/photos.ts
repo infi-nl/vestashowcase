@@ -79,4 +79,8 @@ export const photos: IPhoto[] = [
   { id: 1073, alt: 'SNES controller', },
   { id: 1074, alt: '"Vesta goes brrrrr..." in een regenboogpatroon', },
   { id: 1075, alt: '"Vesta goes brrrrr..." in een regenboogpatroon', },
+  { id: 1076, alt: 'Twee paaseieren en een paashaas', },
+  { id: 1077, alt: 'Palmboom naast strand', },
+  { id: 1078, alt: 'Equalizer bars', },
+  { id: 1079, alt: 'Hond met bot', },
 ];
