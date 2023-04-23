@@ -1,1 +1,0 @@
-import{p as t}from"./photos-48d09e98.js";function e(){const o={};return{photos:t.map(()=>o)}}const r=Object.freeze(Object.defineProperty({__proto__:null,load:e},Symbol.toStringTag,{value:"Module"}));export{r as _,e as l};
