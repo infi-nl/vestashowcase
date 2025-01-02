@@ -12,7 +12,6 @@
   let shuffledPhotos: IPhoto[] = data.photos;
 
   onMount (() => {
-    console.log("onMount");
     const head = photos[0];
     const tail = photos.slice(1);
     shuffledPhotos = [
