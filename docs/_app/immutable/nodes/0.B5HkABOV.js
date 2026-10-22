@@ -1,0 +1,1 @@
+import{O as e,c as t,g as n,v as r,z as i}from"../chunks/CL_ekPzY.js";import"../chunks/BvlEOp48.js";var a=r(`<main class="min-h-screen bg-gradient-to-b from-orange-200 to-orange-400 text-gray-700"><!></main>`);function o(r,o){var s=a(),c=e(s);t(c,o,`default`,{},null),i(s),n(r,s)}export{o as component};
